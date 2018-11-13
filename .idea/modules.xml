@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Swara-Appv2.iml" filepath="$PROJECT_DIR$/Swara-Appv2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sneakernetcommon/sneakernetcommon.iml" filepath="$PROJECT_DIR$/sneakernetcommon/sneakernetcommon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/volley/volley.iml" filepath="$PROJECT_DIR$/volley/volley.iml" />
+    </modules>
+  </component>
+</project>

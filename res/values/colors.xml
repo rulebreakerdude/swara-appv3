@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="light_action_bar_blue">#2E2E2E</color>
+    <color name="dark_action_bar_blue">#CC1414</color>
+    <color name="light_entry_list_background">#e5e5e5</color>
+    <color name="dark_entry_list_background">#000000</color>
+</resources>

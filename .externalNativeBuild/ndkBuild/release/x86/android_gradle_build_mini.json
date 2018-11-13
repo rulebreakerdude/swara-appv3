@@ -1,0 +1,17 @@
+{
+  "buildFiles": [
+    "C:\\Users\\ruleBreakerDude\\Desktop\\Swara-App\\Swara-Appv2\\jni\\Android.mk",
+    "C:\\Users\\ruleBreakerDude\\Desktop\\Swara-App\\Swara-Appv2\\jni\\Application.mk"
+  ],
+  "cleanCommands": [
+    "C:\\Users\\ruleBreakerDude\\AppData\\Local\\Android\\Sdk\\ndk-bundle\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dC:\\Users\\ruleBreakerDude\\Desktop\\Swara-App\\Swara-Appv2\\jni\\Android.mk NDK_APPLICATION_MK\u003dC:\\Users\\ruleBreakerDude\\Desktop\\Swara-App\\Swara-Appv2\\jni\\Application.mk APP_ABI\u003dx86 NDK_ALL_ABIS\u003dx86 NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-16 NDK_OUT\u003dC:/Users/ruleBreakerDude/Desktop/Swara-App/Swara-Appv2/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003dC:\\Users\\ruleBreakerDude\\Desktop\\Swara-App\\Swara-Appv2\\build\\intermediates\\ndkBuild\\release\\lib clean"
+  ],
+  "libraries": {
+    "mp3lame-release-x86": {
+      "artifactName": "mp3lame",
+      "buildCommand": "C:\\Users\\ruleBreakerDude\\AppData\\Local\\Android\\Sdk\\ndk-bundle\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dC:\\Users\\ruleBreakerDude\\Desktop\\Swara-App\\Swara-Appv2\\jni\\Android.mk NDK_APPLICATION_MK\u003dC:\\Users\\ruleBreakerDude\\Desktop\\Swara-App\\Swara-Appv2\\jni\\Application.mk APP_ABI\u003dx86 NDK_ALL_ABIS\u003dx86 NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-16 NDK_OUT\u003dC:/Users/ruleBreakerDude/Desktop/Swara-App/Swara-Appv2/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003dC:\\Users\\ruleBreakerDude\\Desktop\\Swara-App\\Swara-Appv2\\build\\intermediates\\ndkBuild\\release\\lib C:/Users/ruleBreakerDude/Desktop/Swara-App/Swara-Appv2/build/intermediates/ndkBuild/release/obj/local/x86/libmp3lame.so",
+      "abi": "x86",
+      "output": "C:\\Users\\ruleBreakerDude\\Desktop\\Swara-App\\Swara-Appv2\\build\\intermediates\\ndkBuild\\release\\obj\\local\\x86\\libmp3lame.so"
+    }
+  }
+}

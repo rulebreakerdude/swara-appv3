@@ -1,0 +1,4 @@
+#Fri Oct 19 14:24:51 IST 2018
+base.0=C\:\\Users\\ruleBreakerDude\\Desktop\\gittest\\Swara-Appv2\\build\\intermediates\\transforms\\dexMerger\\release\\0
+path.0=classes.dex
+renamed.0=classes.dex

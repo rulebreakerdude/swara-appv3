@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+ 
+<resources
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingTranslation">
+
+    <!-- GENERAL -->
+    <string name="about_feedex">स्वर</string>
+    <string name="welcome_title">Welcome to CGNet Swara. Would you like to add one feed?</string>
+    <string name="never">never</string>
+    <string name="update">Update</string>
+    <string name="colon">:\u00A0</string>
+    <string name="menu_settings">ऑप्शन</string>
+    <string name="menu_refresh">Refresh</string>
+    <string name="menu_all_read">Mark all as read</string>
+    <string name="feedex_feeds">स्वर</string>
+    <string name="error">Error</string>
+    <string name="network_error">The network is not set up</string>
+    <string name="loading">Loading…</string>
+    <string name="no_result">No result</string>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+    <string name="back_again_to_quit">Press back once more to exit</string>
+    <string name="email_preference_file_key">cgnet.swara.activity.PREFERENCE_FILE_KEY</string>
+    <string name="top_up_preference_file_key">cgnet.swara.activity.TOP_UP_PREFERENCE_FILE_KEY</string>
+
+    <!-- FEEDS -->
+    <string name="feeds">Feeds</string>
+    <string name="menu_add_feed">Add feed</string>
+    <string name="no_feeds">No feeds</string>
+    <string name="no_filters">No rules</string>
+    <string name="context_menu_delete">Delete</string>
+    <string name="edit_feed_title">Edit feed</string>
+    <string name="menu_edit_feeds">Edit feeds</string>
+    <string name="new_feed_title">New feed</string>
+    <string name="context_menu_edit">Edit</string>
+    <string name="menu_add_group">Add group</string>
+    <string name="menu_import">Import from OPML</string>
+    <string name="menu_export">Export to OPML</string>
+    <string name="error_feed_error">The feed address could not accessed.</string>
+    <string name="error_feed_process">The feed can not be processed.</string>
+    <string name="error_feed_url_exists">The address already exists.</string>
+    <string name="error_feed_import">The selected file could not be imported.</string>
+    <string name="error_feed_export">The export has failed. Make sure you have a writable SD-card
+        mounted.</string>
+    <string name="error_external_storage_not_available">The external storage (e.g. SD-card) is not
+        available.</string>
+    <string name="feed_url">URL address</string>
+    <string name="optional">(optional)</string>
+    <string name="website_or_feed">(website or feed)</string>
+    <string name="tab_feed_title">Feed</string>
+    <string name="tab_filters_title">Filter</string>
+    <string name="feed_title">TITLE</string>
+    <string name="feed_filters">FILTER RULES</string>
+    <string name="filter_add_title">Add rule</string>
+    <string name="filter_delete_title">Delete rule</string>
+    <string name="filter_edit_title">Edit rule</string>
+    <string name="filter_is_regex">is a regular expression</string>
+    <string name="filter_apply_to_title">Apply to title</string>
+    <string name="filter_apply_to_content">Apply to content</string>
+    <string name="accept">ACCEPT</string>
+    <string name="reject">REJECT</string>
+    <string name="feed_search">Feed search</string>
+    <string name="feed_search_by_web_search">Find feed by key words</string>
+    <string name="feed_search_by_topic">Generate feed by topic (via Faroo)</string>
+    <string name="feed_search_by_youtube">Find feed by Youtube channel name</string>
+    <string name="select_file">Select file (SD-root)</string>
+    <string name="question_delete_feed">Do you really want to delete this feed?</string>
+    <string name="question_delete_group">Do you really want to delete this group and all of its
+        feeds?</string>
+    <string name="question_delete_filter">Do you really want to delete this filter?</string>
+    <string name="add_group_title">Select group name</string>
+    <string name="edit_group_title">Edit group name</string>
+    <string name="message_exported_to">Exported into %s.</string>
+    <string name="to_group_title">Feed move action</string>
+    <string name="to_group_message">You can either put this feed into or above this group. What do
+        you want to do?</string>
+    <string name="to_group_above">Above the group</string>
+    <string name="to_group_into">Into the group</string>
+    <string name="add_custom_feed">Add a custom feed or search for one</string>
+    <string name="google_news_title">Google News topics</string>
+    <string name="google_news_indicator">Select one or several topics to add. Some of them may not be provided by Google for your language.</string>
+    <string name="google_news_top_stories">Top Stories</string>
+    <string name="google_news_world">World</string>
+    <string name="google_news_business">Business</string>
+    <string name="google_news_technology">Technology</string>
+    <string name="google_news_entertainment">Entertainment</string>
+    <string name="google_news_sports">Sports</string>
+    <string name="google_news_science">Science</string>
+    <string name="google_news_health">Health</string>
+
+    <!-- ENTRIES -->
+    <string name="all">सन्देश </string>
+    <string name="no_entries">कोई सन्देश नहीं </string>
+    <string name="favorites">मेरी पसंद</string>
+    <string name="context_menu_hide_read">Hide read entries</string>
+    <string name="context_menu_show_read">Show read entries</string>
+    <string name="context_menu_share_starred">Share starred entries</string>
+    <string name="menu_star">Star</string>
+    <string name="menu_unstar">Unstar</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_full_screen">Full screen</string>
+    <string name="menu_copy_clipboard">Copy link</string>
+    <string name="menu_mark_as_unread">Mark as unread</string>
+    <string name="share_favorites_title">CGNet Swara: starred entries</string>
+    <string name="copied_clipboard">Link copied</string>
+    <string name="get_full_text">Retrieve the full text</string>
+    <string name="original_text">Show original text</string>
+    <string name="see_enclosure">डाउनलोड शुरू करें</string>
+    <string name="see_link">See in browser</string>
+    <string name="cant_open_link">No application found for this link</string>
+    <string name="file">File</string>
+    <string name="open_link">Open link</string>
+
+    <!-- WIDGET -->
+    <string name="red">Red</string>
+    <string name="green">Green</string>
+    <string name="blue">Blue</string>
+    <string name="transparency">Transparency</string>
+
+    <!-- SETTINGS -->
+    <string name="settings_category_refresh">Enable automatic refresh</string>
+    <string name="settings_refresh_enabled"> </string>
+    <string name="settings_refresh_enabled_description">Enable the automatic refresh of feeds</string>
+    <string name="settings_refresh_interval">Refresh interval</string>
+    <string name="settings_category_notifications">Notifications</string>
+    <string name="settings_notifications_enabled">Enable notifications</string>
+    <string name="settings_notifications_enabled_description">Enable notifications in case of new
+        entries</string>
+    <string name="settings_notifications_ringtone">Ringtone</string>
+    <string name="settings_notifications_ringtone_description">Select a ringtone that will be played
+        on new entries</string>
+    <string name="settings_notifications_vibrate">Vibrate</string>
+    <string name="settings_notifications_vibrate_description">Enable the vibration on new entries</string>
+    <string name="settings_notifications_light">Light</string>
+    <string name="settings_notifications_light_description">Enable notification light on new entries</string>
+    <string name="settings_category_content_presentation">Content presentation</string>
+    <string name="settings_light_theme">Light theme</string>
+    <string name="settings_light_theme_description">Use the light theme</string>
+    <string name="settings_keep_time">Time that the entries will be kept</string>
+    <string name="settings_display_images">Display images</string>
+    <string name="settings_display_images_description">Display images in entries</string>
+    <string name="settings_preload_image_mode">Preload images</string>
+    <string name="settings_font_size">Text size</string>
+    <string name="settings_display_oldest_first">Entries order</string>
+    <string name="settings_display_oldest_first_description">Display oldest entries first</string>
+    <string name="settings_display_entries_fullscreen">Auto-fullscreen entries</string>
+    <string name="settings_display_entries_fullscreen_description">Automatically display entries in fullscreen</string>
+    <string name="settings_refresh_on_open">Refresh feeds on open</string>
+    <string name="settings_refresh_on_open_description">Refreshes all feeds after opening the
+        application</string>
+    <string name="settings_refresh_wifi_only">Refresh only over Wi-Fi</string>
+    <string name="settings_refresh_wifi_only_description">Automatic refresh will only be done if Wi-Fi connection is available</string>
+    <string name="settings_visible_feeds">Visible feeds</string>
+    <string name="settings_widget_background">Background</string>
+    <string name="settings_widget_background_description">Color and transparency of the widget
+        background</string>
+    <string name="all_feeds">All feeds (incl. future)</string>
+    <string name="settings_screen_proxy">Proxy</string>
+    <string name="settings_category_network">Network</string>
+    <string name="settings_proxy_enabled">Enabled</string>
+    <string name="settings_proxy_wifi_only">Wi-Fi only</string>
+    <string name="settings_proxy_wifi_only_description">Use Proxy only for Wi-Fi</string>
+    <string name="settings_proxy_host">Host</string>
+    <string name="settings_proxy_port">Port</string>
+    <string name="settings_proxy_type">Type</string>
+
+    <plurals name="number_of_new_entries">
+        <item quantity="one">One नया सन्देश</item>
+        <item quantity="other">%d नए सन्देश</item>
+    </plurals>
+
+    <plurals name="number_of_new_bultoo_entries">
+        <item quantity="one">(1 नया ₹-सन्देश)</item>
+        <item quantity="other">(%d नए ₹- सन्देश)</item>
+    </plurals>
+
+    <string-array name="settings_intervals">
+        <item>1 minute</item>
+        <item>5 minutes</item>
+        <item>15 minutes</item>
+        <item>30 minutes</item> 
+        <item>1 hour</item>
+        <item>2 hours</item>
+        <item>6 hours</item>
+        <item>12 hours</item>
+        <item>1 day</item> 
+    </string-array>
+    <string-array name="settings_keep_times"> 
+        <item>1 day</item>
+        <item>2 days</item>
+        <item>4 days</item>
+        <item>1 week</item>
+        <item>2 weeks</item>
+        <item>1 month</item>
+        <item>2 months</item>
+        <item>3 months</item>
+        <item>Forever</item>
+    </string-array>
+    <string-array name="settings_font_sizes">
+        <item>-2</item>
+        <item>-1</item>
+        <item>Standard</item>
+        <item>+1</item>
+        <item>+2</item>
+        <item>+3</item>
+    </string-array>
+    <string-array name="settings_preload_image_modes"> 
+		<item>Never</item>
+        <item>Only over Wi-Fi</item>
+        <item>Always</item>
+    </string-array>
+
+    
+
+    <!--  CGNet Swara  -->
+    <string name="main_title">स्वर</string>
+    <string name="record">सन्देश रिकॉर्ड करें</string>
+    <string name="include_image">फोटो के साथ सन्देश रिकॉर्ड करें</string>
+    <string name="listen">संदेशों को सुनें और दूसरों को भेजें</string>
+    <string name="your_number">आपका फ़ोन नंबर भरें :</string>
+    <string name="your_number_and_operator">आपका फ़ोन नंबर भरें और ऑपरेटर चुनें:</string>
+    <string name="limit">बटन दबाने के बाद अपना सन्देश 3 मिनट के अंदर रिकॉर्ड करें </string>
+    <string name="title_activity_get_audio_files">स्वर</string>
+    <string name="title_activity_record_audio">स्वर</string>
+    <string name="title_activity_main">स्वर</string>
+    <string name="file_sent">आपका सन्देश भेज दिया जायेगा </string> 
+	<string name="select_picture">सन्देश के लिए फोटो चुनें  </string>
+	<string name="ok_phone">ठीक</string>
+	<string name="cancel_phone">रद्द</string>
+    <string name="download_and_save">डाउनलोड शुरू करें</string>
+    <string name="open_enclosure">डाउनलोड शुरू करें</string>
+    <string name="search_entries">खोज</string>
+    <string name="discard_message">क्या आप इस संदेश को रद्द करना चाहते हैं?</string>
+    <string name="yes_message">हाँ </string>
+    <string name="no_message">नहीं </string>
+    <string name="tap_image_to_choose_another">फोटो बदलने के लिए यहाँ दबाएं</string>
+    <string name="your_message_discarded">आपका संदेश रद्द कर दिया जाएगा। </string>
+    <string name="interviee_phone_number">संदेश बताने वाला का फ़ोन नंबर भरें</string>
+    <string name="self_recording">मैं संदेश बताने वाला हूँ</string>
+    <string name="interviee_show_numbernumber"> शिकायत कर्ता का फ़ोन नंबर: </string>
+    <string name="download_alert_before_share">भेजने से पेहले सन्देश​ डाउनलोड करें</string>
+    <string name="listen_bultoo">बुल्टू संदेशों को सुनें</string>
+    <string name="bultoo">बुल्टू</string>
+    <string name="bultoo_entries">बुल्टू - ₹</string>
+    <string name="share_app_text">स्वर ऐप ब्लूटूथ​ से भेजें</string>
+
+    <!-- Bultoo TopUps -->
+    <string name="app_name_for_topup_server">Swara</string>
+    <string name="bultoo_share_counter_message">You have successfully shared a Bultoo file. You will receive a top up for every 10 files you share.\nShare %d more Bultoo files to earn a top up.</string>
+    <string name="bultoo_success">Congratulations!</string>
+    <string name="bultoo_counter">bultoo_counter</string>
+    <string name="bultoo_sent_10">You will earn a top up soon!\\nShare %d more files to get another top up.</string>
+    <string name="app_share_success">You have successfully shared the Swara app.  You will receive a top up soon.</string>
+    <string name="json_object">json_object</string>
+    <string name="isApk">isApk</string>
+    <string name="apk_file_name">apk</string>
+    <string name="cash_in_amount">cash_in_amount</string>
+    <string name="cash_in_message">You are eligible to cash-in approximately ₹%.2f</string>
+
+    <string name="bultoo_success_hindi">अभिनन्दन!</string>
+    <string name="bultoo_sent_10_hindi">आप जल्द ही एक मोबाइल टॉप अप प्राप्त करेंगे!\\nएक और मोबाइल टॉप अप पाने के लिए %d बुल्टू संदेश भेजिये|</string>
+    <string name="bultoo_share_counter_message_hindi">आपने सफलतापूर्वक एक बुल्टू संदेश भेजा की है| आपसे भेज दिया गया प्रत्येक 10 संदेशों के लिए आपको मोबाइल टॉप अप प्राप्त होगा|\\nटॉप अप पाने के लिए आप शायद %d और बुल्टू संदेश भेजना है|</string>
+    <string name="phone_prompt_title_hindi">फोन नंबर भरें</string>
+    <string name="phone_prompt_message_hindi">उदा : 7788889999</string>
+    <string name="nonempty_hindi">परिपूर्ण फोन नंबर भरें</string>
+    <string name="char_length_hindi">दस अंक होना चाहिए</string>
+    <string name="carrier_prompt_title_hindi">मोबाइल ऑपरेटर चुनें</string>
+    <string name="app_share_success_hindi">आपने सफलतापूर्वक स्वर एप्लिकेशन भेजा की है| आप जल्द ही एक मोबाइल टॉप अप प्राप्त करेंगे|</string>
+    <string name="bultoo_share_alert">आप एक बुल्टू संदेश भेजने में सफल हुए|</string>
+    <string name="top_up_jio">टॉप अप की सुविधा जियो पर उपलब्ध नहीं है|</string>
+    <string name="warning_jio">सावधान</string>
+
+	<!--  Never used -->
+    <string name="download_more">Download More</string>
+    <string name="playback">Playback audio</string>
+    <string name="send">Send audio</string>
+    <string name="back">Back to main menu</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string> 
+    <string name="begin">Begin</string>
+    <string name="zero">Start recording</string>
+    <string name="one">Stop</string>
+    <string name="three">3</string>
+    <string name="sponsored_aware_authority">swara_sponsored_aware</string>
+
+    <string name="development_cloud_endpoint_bultoo">http://sneakernet.southindia.cloudapp.azure.com:3976/sentBluetooth/</string>
+    <string name="development_cloud_endpoint_bultoo_installation">http://sneakernet.southindia.cloudapp.azure.com:3976/checkTopUp/</string>
+    <string name="first_file_transfer">first_file_transfer</string>
+    <string name="rss_feed_url">http://cgnetswara.org//podcast-bultoo.php</string>
+    <string name="whatsapp_package">com.whatsapp</string>
+    <string name="carrier_name">carrier_name</string>
+    <string name="sponsor_message">Sponsored by</string>
+
+
+</resources>

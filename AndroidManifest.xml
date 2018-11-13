@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="org.cgnet.swara2"
+    android:installLocation="auto">
+	
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> 
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" /> 
+    <uses-permission android:name="android.permission.RECORD_AUDIO" /> 
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> 
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    
+    <application
+        android:name="org.cgnet.swara2.MainApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/cgnet_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.Light"
+        tools:replace="android:allowBackup">
+        <service android:name="org.cgnet.swara2.service.RefreshService" />
+        <service android:name="org.cgnet.swara2.service.FetcherService" />
+   
+        <provider
+            android:name="org.cgnet.swara2.provider.FeedDataContentProvider"
+            android:authorities="net.fred.feedex.provider.FeedData"
+            android:exported="true" />
+
+        <activity
+            android:name="org.cgnet.swara2.activity.HomeActivity"
+            android:label="@string/app_name" >
+        </activity>
+         
+        <!-- <activity
+            android:name="org.cgnet.swara.activity.AddGoogleNewsActivity"
+            android:label="@string/google_news_title"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="org.cgnet.swara.activity.AboutActivity"
+            android:label="@string/about_feedex"
+            android:launchMode="singleTask" />  -->
+        <activity
+            android:name="org.cgnet.swara2.activity.EditFeedsListActivity"
+            android:label="@string/feeds"
+            android:launchMode="singleTask" />
+        
+        <activity
+            android:name="org.cgnet.swara2.activity.EntryActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTask" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" /> 
+                <category android:name="android.intent.category.DEFAULT" /> 
+                <data android:mimeType="vnd.android.cursor.item/vnd.feedex.entry" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="org.cgnet.swara2.activity.GeneralPrefsActivity"
+            android:label="@string/menu_settings"
+            android:launchMode="singleTask" />
+        
+         
+        <activity android:name="org.cgnet.swara2.activity.EditFeedActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.EDIT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="vnd.android.cursor.item/vnd.feedex.feed" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.INSERT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="vnd.android.cursor.dir/vnd.feedex.feed" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+        </activity>
+
+        
+ 
+        <receiver android:name="org.cgnet.swara2.receiver.BootCompletedBroadcastReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        
+        <receiver android:name="org.cgnet.swara2.receiver.ConnectionChangeReceiver" >
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name="org.cgnet.swara2.receiver.ChooserReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.CHOOSER" />
+                <action android:name="org.cgnet.swara.FILE_SELECTED" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name="org.cgnet.swara2.service.RefreshService$RefreshAlarmReceiver" />
+
+        <activity
+            android:name="cgnet.swara.activity.MainActivity"
+            android:launchMode="singleTask"
+            android:configChanges="keyboardHidden|orientation"
+			android:windowSoftInputMode="stateHidden"
+			android:screenOrientation="portrait" 
+            android:label="@string/app_name" >
+           	<intent-filter>
+                <action android:name="android.intent.action.MAIN" /> 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+         
+        <activity
+            android:name="cgnet.swara.activity.RecordAudio"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_record_audio" >
+        </activity>
+        
+   		<receiver android:name="cgnet.swara.activity.Receiver" >
+		    <intent-filter> 
+		        <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+		        <action android:name="com.android.CUSTOM_INTENT" />
+		    </intent-filter>
+		</receiver>
+
+
+    <meta-data android:name="com.google.android.gms.version"
+               android:value="@integer/google_play_services_version" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="org.cgnet.swara2.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+        
+    </application>
+
+</manifest>

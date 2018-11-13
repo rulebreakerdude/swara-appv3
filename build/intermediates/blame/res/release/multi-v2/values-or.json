@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\ruleBreakerDude\\Desktop\\gittest\\Swara-Appv2\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-or\\values-or.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\ruleBreakerDude\\.gradle\\caches\\transforms-1\\files-1.1\\sneakernetcommon-debug.aar\\eb327b02160534a78f5d04faeed09ac9\\res\\values-or\\values-or.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,123,180,244,306,371,445,550,620,678,740,810,918,975,1038,1102,1158,1221,1322,1385",
+                        "endColumns": "67,56,63,61,64,73,104,69,57,61,69,107,56,62,63,55,62,100,62,67",
+                        "endOffsets": "118,175,239,301,366,440,545,615,673,735,805,913,970,1033,1097,1153,1216,1317,1380,1448"
+                    }
+                }
+            ]
+        }
+    ]
+}

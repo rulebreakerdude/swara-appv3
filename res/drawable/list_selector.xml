@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector 
+    xmlns:android="http://schemas.android.com/apk/res/android">
+   
+    <item
+        android:left="20dp"
+        android:right="20dp" 
+    	android:top="20dp" 
+ 	    android:bottom="20dp"
+     	android:state_selected="false"
+        android:state_pressed="false"
+        android:drawable="@drawable/gradient_bg" />
+ 
+    <item 
+        android:left="20dp"
+        android:right="20dp" 
+    	android:top="20dp" 
+ 	    android:bottom="20dp"
+        android:state_pressed="true"
+        android:drawable="@drawable/gradient_bg_hover" />
+ 
+    <item 
+        android:left="20dp"
+        android:right="20dp" 
+    	android:top="20dp" 
+ 	    android:bottom="20dp"
+        android:state_selected="true"
+     	android:state_pressed="false"
+        android:drawable="@drawable/gradient_bg_hover" />
+     
+    <corners 
+         android:radius="4dp" /> 
+         
+</selector>
