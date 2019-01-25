@@ -73,7 +73,7 @@ public class FeedData {
 
     public static final String ALL_UNREAD_NUMBER = "(SELECT " + Constants.DB_COUNT + " FROM " + EntryColumns.TABLE_NAME + " WHERE " + EntryColumns.IS_READ + " IS NULL)";
     public static final String FAVORITES_NUMBER = "(SELECT " + Constants.DB_COUNT + " FROM " + EntryColumns.TABLE_NAME + " WHERE " + EntryColumns.IS_FAVORITE + Constants.DB_IS_TRUE + ')';
-//    public static final String BULTOO_NUMBER = "(SELECT " + Constants.DB_COUNT + " FROM " + EntryColumns.TABLE_NAME + " WHERE " + EntryColumns.IS_BULTOO + Constants.DB_IS_TRUE + ')';
+    //public static final String BULTOO_NUMBER = "(SELECT " + Constants.DB_COUNT + " FROM " + EntryColumns.TABLE_NAME + " WHERE " + EntryColumns.IS_BULTOO + Constants.DB_IS_TRUE + ')';
 
     public static class FeedColumns implements BaseColumns {
         public static final String TABLE_NAME = "feeds";

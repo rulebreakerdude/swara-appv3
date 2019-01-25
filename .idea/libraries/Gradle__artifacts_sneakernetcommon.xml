@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="Gradle: artifacts:sneakernetcommon">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/sneakernetcommon-debug.aar/4bdac21d79f279713bc051ababc034f0/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/sneakernetcommon-debug.aar/4bdac21d79f279713bc051ababc034f0/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/sneakernetcommon-debug.aar/c9e7467a7c06d5124c374b130fb1c0bd/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/sneakernetcommon-debug.aar/c9e7467a7c06d5124c374b130fb1c0bd/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

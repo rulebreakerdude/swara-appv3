@@ -63,6 +63,7 @@ import android.net.Uri;
 import android.os.Environment;
 import android.text.format.DateFormat;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.webkit.JavascriptInterface;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
@@ -184,9 +185,12 @@ public class EntryView extends WebView {
         Context context = getContext();
         StringBuilder dateStringBuilder = new StringBuilder(DateFormat.getLongDateFormat(context).format(date)).append(' ').append(
                 DateFormat.getTimeFormat(context).format(date));
+        Log.e("original string is",enclosure);
         
         String temp = enclosure.split("http://cgnetswara.org//audio/")[1];
-        String audio_recording = temp.split("\\[")[0]; 
+
+        String audio_recording = temp.split("\\[")[0];
+        Log.e("string is",audio_recording);
           
         // Creates a folder for the app's recordings
         String path_audio = Environment.getExternalStorageDirectory().getAbsolutePath();

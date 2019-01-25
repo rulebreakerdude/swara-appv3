@@ -137,11 +137,11 @@ public class HomeActivity extends BaseActivity implements LoaderManager.LoaderCa
 //        Bundle extras = getIntent().getExtras();
 //        String url = extras.getString("podcastURL");
 
-        PrefUtils.putString(PrefUtils.KEEP_TIME, "15");
+        PrefUtils.putString(PrefUtils.KEEP_TIME, "1");
 
         // !!!!
+        Log.e("Rss feed url:",getString(R.string.rss_feed_url));
         FeedDataContentProvider.addFeed(HomeActivity.this, getString(R.string.rss_feed_url), getResources().getString(R.string.main_title), true);
-        
         setContentView(R.layout.activity_home);
 
         // Get tracker.
@@ -335,6 +335,7 @@ public class HomeActivity extends BaseActivity implements LoaderManager.LoaderCa
                 FeedColumns.IS_GROUP, FeedColumns.GROUP_ID, FeedColumns.ICON, FeedColumns.LAST_UPDATE, FeedColumns.ERROR, FEED_UNREAD_NUMBER},
                 PrefUtils.getBoolean(PrefUtils.SHOW_READ, true) ? "" : WHERE_UNREAD_ONLY, null, null
         );
+        Log.e("Entry number",FEED_UNREAD_NUMBER );
         cursorLoader.setUpdateThrottle(Constants.UPDATE_THROTTLE_DELAY);
         return cursorLoader;
     }

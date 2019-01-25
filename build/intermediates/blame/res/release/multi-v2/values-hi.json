@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\ruleBreakerDude\\Desktop\\gittest\\Swara-Appv2\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-hi\\values-hi.xml",
+            "outputFile": "C:\\Users\\ruleBreakerDude\\Desktop\\Work\\Swara-App\\Swara-Appv2\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-hi\\values-hi.xml",
             "map": [
                 {
                     "source": "C:\\Users\\ruleBreakerDude\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-12.0.1.aar\\6635281a94ecf5c69598b11a256d9b79\\res\\values-hi\\values.xml",
@@ -38,7 +38,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\ruleBreakerDude\\.gradle\\caches\\transforms-1\\files-1.1\\sneakernetcommon-debug.aar\\eb327b02160534a78f5d04faeed09ac9\\res\\values-hi\\values-hi.xml",
+                    "source": "C:\\Users\\ruleBreakerDude\\.gradle\\caches\\transforms-1\\files-1.1\\sneakernetcommon-debug.aar\\c9e7467a7c06d5124c374b130fb1c0bd\\res\\values-hi\\values-hi.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

@@ -718,8 +718,9 @@ public class FeedDataContentProvider extends ContentProvider {
     }
 
     public static void addFeed(Context context, String url, String name, boolean retrieveFullText) {
-  
+
     	ContentResolver cr = context.getContentResolver();
+
 
         if (!url.startsWith(Constants.HTTP_SCHEME) && !url.startsWith(Constants.HTTPS_SCHEME)) {
             url = Constants.HTTP_SCHEME + url;
@@ -770,6 +771,7 @@ public class FeedDataContentProvider extends ContentProvider {
             cr.notifyChange(EntryColumns.FAVORITES_CONTENT_URI, null);
             cr.notifyChange(FeedColumns.CONTENT_URI, null);
             cr.notifyChange(FeedColumns.GROUPS_CONTENT_URI, null);
+            cr.notifyChange(EntryColumns.CONTENT_URI, null);
             cr.notifyChange(EntryColumns.BULTOO_CONTENT_URI, null);
         }
     }

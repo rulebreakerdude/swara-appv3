@@ -287,7 +287,7 @@
     <string name="development_cloud_endpoint_bultoo">http://sneakernet.southindia.cloudapp.azure.com:3976/sentBluetooth/</string>
     <string name="development_cloud_endpoint_bultoo_installation">http://sneakernet.southindia.cloudapp.azure.com:3976/checkTopUp/</string>
     <string name="first_file_transfer">first_file_transfer</string>
-    <string name="rss_feed_url">http://cgnetswara.org//podcast-bultoo.php</string>
+    <string name="rss_feed_url">http://cgnetswara.org/podcast.php</string>
     <string name="whatsapp_package">com.whatsapp</string>
     <string name="carrier_name">carrier_name</string>
     <string name="sponsor_message">Sponsored by</string>

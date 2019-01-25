@@ -333,7 +333,7 @@ public class FetcherService extends IntentService {
                 if (nbAttempt + 1 > MAX_TASK_ATTEMPT) {
                     operations.add(ContentProviderOperation.newDelete(TaskColumns.CONTENT_URI(taskId)).build());
                 } else {
-                    ContentValues values = new ContentValues();
+                 ContentValues values = new ContentValues();
                     values.put(TaskColumns.NUMBER_ATTEMPT, nbAttempt + 1);
                     operations.add(ContentProviderOperation.newUpdate(TaskColumns.CONTENT_URI(taskId)).withValues(values).build());
                 }
@@ -393,9 +393,11 @@ public class FetcherService extends IntentService {
     }
 
     private int refreshFeeds() {
+
         ContentResolver cr = getContentResolver();
         final Cursor cursor = cr.query(FeedColumns.CONTENT_URI, FeedColumns.PROJECTION_ID, null, null, null);
         int nbFeed = cursor.getCount();
+        Log.e("Count=",""+nbFeed);//S64 feed count clue
 
         ExecutorService executor = Executors.newFixedThreadPool(THREAD_NUMBER, new ThreadFactory() {
             @Override
@@ -405,6 +407,7 @@ public class FetcherService extends IntentService {
                 return t;
             }
         });
+
 
         CompletionService<Integer> completionService = new ExecutorCompletionService<Integer>(executor);
         while (cursor.moveToNext()) {
@@ -416,11 +419,13 @@ public class FetcherService extends IntentService {
                     try {
                         result = refreshFeed(feedId);
                     } catch (Exception ignored) {
+                        ignored.printStackTrace();//S64:adding stacktrace line
                     }
                     return result;
                 }
             });
         }
+
         cursor.close();
 
         int globalResult = 0;
@@ -432,16 +437,19 @@ public class FetcherService extends IntentService {
             }
         }
 
+
         executor.shutdownNow(); // To purge all threads
 
         return globalResult;
     }
 
     private int refreshFeed(String feedId) {
+
         RssAtomParser handler = null;
 
         ContentResolver cr = getContentResolver();
         Cursor cursor = cr.query(FeedColumns.CONTENT_URI(feedId), null, null, null, null);
+
 
         if (cursor.moveToFirst()) {
             int urlPosition = cursor.getColumnIndex(FeedColumns.URL);
@@ -456,7 +464,9 @@ public class FetcherService extends IntentService {
             HttpURLConnection connection = null;
 
             try {
+
                 String feedUrl = cursor.getString(urlPosition);
+
                 connection = NetworkUtils.setupConnection(feedUrl);
                 String contentType = connection.getContentType();
                 int fetchMode = cursor.getInt(fetchmodePosition);
@@ -510,6 +520,7 @@ public class FetcherService extends IntentService {
                             }
                         }
                         // this indicates a badly configured feed
+                        Log.e("pos=",""+posStart);
                         if (posStart == -1) {
                             connection.disconnect();
                             connection = NetworkUtils.setupConnection(feedUrl);
@@ -570,17 +581,21 @@ public class FetcherService extends IntentService {
                     case FETCHMODE_DIRECT: {
                         if (contentType != null) {
                             int index = contentType.indexOf(CHARSET);
+                            Log.e("index",""+index);
 
                             int index2 = contentType.indexOf(';', index);
+                            Log.e("index2",""+contentType.substring(index + 8));
 
                             InputStream inputStream = connection.getInputStream();
                             Xml.parse(inputStream,
                                     Xml.findEncodingByName(index2 > -1 ? contentType.substring(index + 8, index2) : contentType.substring(index + 8)),
                                     handler);
+
                         } else {
                             InputStreamReader reader = new InputStreamReader(connection.getInputStream());
                             Xml.parse(reader, handler);
                         }
+
                         break;
                     }
                     case FETCHMODE_REENCODE: {

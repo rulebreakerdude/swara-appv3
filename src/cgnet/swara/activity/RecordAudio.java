@@ -14,6 +14,7 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
@@ -707,11 +708,16 @@ public class RecordAudio extends Activity implements LocationListener {
 		 
 		mFileToBeSent = true; 
 		mUserLogs.writeToFile();
-		 
-		Intent intent = new Intent();  
-		GoogleAnalytics.getInstance(this.getBaseContext()).dispatchLocalHits();
+		IntentFilter filter = new IntentFilter();
+		filter.addAction("com.android.CUSTOM_INTENT");
+		Receiver r=new Receiver();
+		registerReceiver(r,filter);
+		Intent intent = new Intent();
+		//GoogleAnalytics.getInstance(this.getBaseContext()).dispatchLocalHits();
 		intent.setAction("com.android.CUSTOM_INTENT");
-		sendBroadcast(intent);  
+		sendBroadcast(intent);
+		Log.e("truth","4");
+		unregisterReceiver(r);
 	} 
 	
 	@Override
@@ -794,6 +800,7 @@ public class RecordAudio extends Activity implements LocationListener {
 				bitmap = null;
 			}
 		}
+
 	}
 
 	@Override

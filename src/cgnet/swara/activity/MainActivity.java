@@ -21,6 +21,7 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
@@ -28,6 +29,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.Handler;
 import android.support.v4.content.FileProvider;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -53,6 +55,8 @@ import static org.cgnet.swara2.utils.UiUtils.promptForPhoneNumber;
  */ 
 public class MainActivity extends Activity {
 	protected static final String TAG = "MainActivity";
+	//s64:declaring a receiver to register CUSTOM_INTENT, See the runnable towards the end of onCreate
+	Receiver r=new Receiver();
 
 	/** Opens an activity that allows a user to record and send a message. */
 	private Button mRecordMessage;
@@ -249,6 +253,7 @@ public class MainActivity extends Activity {
 		if (!dir_audio.exists()|| !dir_audio.isDirectory()) {
 			dir_audio.mkdirs();
 		}
+
 		
 		if(mNumber != null && mNumber.getText().toString() != null &&  mNumber.getText().toString().length() == 10) {
 			mRecordMessage.setEnabled(true);
@@ -285,11 +290,27 @@ public class MainActivity extends Activity {
 			}
 			public void beforeTextChanged(CharSequence s, int start, int count, int after){}
 			public void onTextChanged(CharSequence s, int start, int before, int count){}
-		}); 
-		
-		Intent intent = new Intent();   
+		});
+		//Runnable to re-push the CUSTOM_INTENT every 2 seconds
+		IntentFilter filter = new IntentFilter();
+		filter.addAction("com.android.CUSTOM_INTENT");
+		Receiver r=new Receiver();
+		registerReceiver(r,filter);
+		final Intent intent = new Intent();
 		intent.setAction("com.android.CUSTOM_INTENT");
-		sendBroadcast(intent);
+
+
+		final Handler mHandler=new Handler();
+
+		Runnable runnable = new Runnable() {
+			@Override
+			public void run() {
+				sendBroadcast(intent);//Actual broadcast
+				mHandler.postDelayed(this, 10000);
+			}
+		};
+		mHandler.post(runnable);
+
 	}
 
 
@@ -375,6 +396,7 @@ public class MainActivity extends Activity {
 	protected void onPause() { 
 		super.onPause();
 		mSharedPref.unregisterOnSharedPreferenceChangeListener(spChanged);
+		//unregisterReceiver(r);
 		 
 	}
 

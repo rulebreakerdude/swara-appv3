@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\ruleBreakerDude\\Desktop\\Swara-App\\Swara-Appv2\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw\\values-sw.xml",
+            "outputFile": "C:\\Users\\ruleBreakerDude\\Desktop\\Work\\Swara-App\\Swara-Appv2\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw\\values-sw.xml",
             "map": [
                 {
                     "source": "C:\\Users\\ruleBreakerDude\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-12.0.1.aar\\6635281a94ecf5c69598b11a256d9b79\\res\\values-sw\\values.xml",

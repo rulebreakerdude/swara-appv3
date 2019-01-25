@@ -38,13 +38,13 @@ class SendEmailAsyncTask extends AsyncTask <Void, Void, Boolean> {
 	private String mUniqueAudioRecording;
 	
 	/** Email address the email is sent from. */
-	private final String mFromAdddress = "";//EmailLogin.email;
+	private final String mFromAdddress = "rulebreakerdude@gmail.com";//EmailLogin.email;
 	
 	/** Password for the SMTP server so that the email can be sent.  */
-	private final String mFromPassword = "";//EmailLogin.password;
+	private final String mFromPassword = "20H@5GH@RM33TU";//EmailLogin.password;
 	
 	/** Email address that the message is sent to. */
-	private final String mToAddress = "cgnetswaratest@gmail.com";
+	private final String mToAddress = "cgnetswaratest@gmail.com";//"cgnetswaratest@gmail.com";
 	  
 	/** True if the email has been sent, false otherwise. */
 	private boolean mEmailSent = false;
@@ -157,7 +157,7 @@ class SendEmailAsyncTask extends AsyncTask <Void, Void, Boolean> {
 						Integer.toString(R.string.email_preference_file_key),Context.MODE_PRIVATE
 				);
 				SharedPreferences.Editor editor = sharedPref.edit();
-				editor.putBoolean(mTextFileName.substring(1,mTextFileName.length()-4), true);
+				editor.putBoolean(mTextFileName.substring(0,mTextFileName.length()-4), true);
 				editor.apply();
 
         		return true;

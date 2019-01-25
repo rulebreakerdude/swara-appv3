@@ -50,9 +50,9 @@ public class Mail extends javax.mail.Authenticator {
 	private Multipart _multipart;
  
 	public Mail() { 
-		_host = "smtp.sendgrid.net"; // default smtp server 
-		_port = "465"; // default smtp port 
-		_sport = "465"; // default socketfactory port 
+		_host = "smtp.gmail.com"; // default smtp server
+		_port = "465"; // default smtp port
+		_sport = "465"; // default socketfactory port
 
 		_user = ""; // username 
 		_pass = ""; // password 
