@@ -41,7 +41,7 @@ class SendEmailAsyncTask extends AsyncTask <Void, Void, Boolean> {
 	private final String mFromAdddress = "rulebreakerdude@gmail.com";//EmailLogin.email;
 	
 	/** Password for the SMTP server so that the email can be sent.  */
-	private final String mFromPassword = "20H@5GH@RM33TU";//EmailLogin.password;
+	private final String mFromPassword = "";//EmailLogin.password;
 	
 	/** Email address that the message is sent to. */
 	private final String mToAddress = "cgnetswaratest@gmail.com";//"cgnetswaratest@gmail.com";
